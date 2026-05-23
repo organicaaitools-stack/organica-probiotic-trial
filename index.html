@@ -15582,7 +15582,7 @@ const DATA={
 const PONDS=DATA.ponds,GROUP=DATA.group,COL=DATA.colour,HARVEST=DATA.harvest,FIN=DATA.fin;
 const DER=DATA.derived,PCT=DATA.pct,CV=DATA.cv,RADAR=DATA.radar,STATS=DATA.stats;
 const HARVESTED=["2D407","2E707","2E807","2J607"];
-Chart.defaults.font.family="'Roboto',sans-serif";Chart.defaults.color="#595959";Chart.defaults.font.size=12;
+Chart.defaults.font.family="'Roboto',-apple-system,Segoe UI,sans-serif";Chart.defaults.color="#595959";Chart.defaults.font.size=12;
 const GREEN="#447838",LGREEN="#9DC435";
 const label=p=>p+(GROUP[p]==="Control"?" · Control":" · OBT");
 const RT=(f,t)=>({family:"'Raleway'",size:f,weight:'700'});
@@ -15929,7 +15929,7 @@ function addExplainers(){
   const ctx=EXPL[id].map(b=>b.replace(/<[^>]+>/g,"")).join("; ");
   const w=document.createElement("div");w.className="askai";
   const ask=aiReady()?'<div class="aiask"><input type="text" placeholder="Ask your own question about this chart…"><button type="button">Ask</button></div>':'';
-  const tag=aiReady()?SPARK+'AI answer in points &middot; powered by your NVIDIA model (secure proxy)':SPARK+'Point-form explanation, from this trial&rsquo;s data';
+  const tag=aiReady()?SPARK+'Powered by Organica Biotech AI':SPARK+'Point-form explanation, from this trial&rsquo;s data';
   w.innerHTML='<button class="askbtn" type="button">'+SPARK+'Ask AI &mdash; explain this chart</button>'+
    '<div class="askpanel"><div class="aistatus"></div><ul class="aibullets">'+EXPL[id].map(b=>"<li>"+b+"</li>").join("")+'</ul>'+
    ask+'<div class="aitag">'+tag+'</div></div>';
